@@ -23,7 +23,7 @@ module.exports = {
         })
     },
     countMines: function(arr) {
-        return arr.map(value => value === '*' ? 1 : 0).reduce((sum, val) => sum + val)
+        return arr.filter(value => value === '*').length
     },
     play: function(n, m) {
         return this.generateField(n, m).map((value, index, arr) => {
